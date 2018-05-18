@@ -1,0 +1,42 @@
+extends ../base
+block title
+	| personal-area-static page
+block main
+	section.own_partner_cabinet
+		.container
+			.title_wrap_h2
+				h2 Личный кабинет партнера
+			.input_button
+				label Ваша партнерская ссылка:
+				input(type='text' title='Имя занято другим юзером' class='switch' value="https://stockaccs.com/?parther=XXXXX" readonly)
+				button.btn-form.btn-switch ИЗМЕНИТЬ
+	.container
+		hr
+	section.menu_profile
+		.container
+			.wrap_menu_profile
+				.menu
+					ul.menu_list
+						li
+							a(href='#') Мой профиль
+						li
+							a(href='#') Статистика
+						li.active_item
+							a(href='#') Баланс
+						li
+							a(href='#') Выплаты
+						li
+							a(href='#') Выход
+				.profile
+					//сменная часть
+					.profile_header БАЛАНС
+					.profile_body_balance
+						p
+							span 200.0001831 $
+							| Cумма доступная к выводу.
+					.profile_header ВЫПЛАТЫ СОДЕРЖАТ
+					.profile_body_balance
+						p
+							span 200.0001831 $
+							| Cумма доступная к выводу.
+

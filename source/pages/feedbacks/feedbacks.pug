@@ -1,0 +1,92 @@
+extends ../base
+block title
+	| feedbacks page
+block main
+	section.feedbacks-section
+		.container
+			.title_wrap_h2
+				h2 Отзывы
+			.feedbacks_list
+				.fl_item
+					.logo_red
+						img(src=require("../../img/red-logo.png"))
+					.fl_body
+						.user_data_dots
+							.wrap_user_data
+								.user_name Олег Белик
+								.feedback_data 12/12/2016
+							.dots 
+								img(src=require("../../img/red-comas.png"))
+						.feedback-text
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillumdolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed utperspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo invit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				hr
+				.fl_item
+					.logo_red
+						img(src=require("../../img/red-logo.png"))
+					.fl_body
+						.user_data_dots
+							.wrap_user_data
+								.user_name Олег Белик
+								.feedback_data 12/12/2016
+							.dots
+								img(src=require("../../img/red-comas.png"))
+						.feedback-text
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillumdolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed utperspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo invit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				hr
+			.loader_more
+				a(href='#') Загрузить еще отзывы
+	section.form_opinion
+		.container
+			.title_wrap
+				h4 Оставьте отзыв:
+			.form_opinion_wrap
+				.form_container
+					form
+						input(type='hidden')
+						.alert-danger.name-feedbacks
+							.feedbacks-name
+						.form_akk_name
+							.form-group.field-akk_name.required.has-error
+								label.control-label Имя
+								input(type='text').input.input_big
+								.help-block
+						.alert-danger.email-feedbacks
+							.feedbacks-email
+						.form_user_email
+							.form-group.field-user_email.required.has-error
+								label.control-label Эл. адрес:
+								input(type='text').input.input_big
+								.help-block
+						.form_user_email
+							.form-group.field-accountsnotavailableindex-form_name.has-success
+								label.control-label
+								input(type='hidden').input.input_big
+								.help-block
+						.form-group.field-feedbacks-feedback.required
+							label.control-label Сообщение:
+							textarea(rows=5).input.input_big
+							.help-block
+						// это для капча
+						.form-group.field-accountsnotavailableindex-recaptcha
+							| Капча
+						.form-group
+							button(type='submit').btn-form Отправить
+						.contacts-validate
+				.opinion
+					.opinion_text
+						h4 Нам очень важно Ваше мнение!
+						p Оставьте отзыв на одном из ресурсов. Для нас важен каждый отзыв для анализа или устраниения ошибок в будущем.
+					.resourse-list
+						ul
+							li
+								img(src=require("../../img/Antichat.png"))
+								a(href='#') Antichat
+							li
+								img(src=require("../../img/GoFuckBiz.png"))
+								a(href='#') GoFuckBiz
+							li
+								img(src=require("../../img/umaxforum.png"))
+								a(href='#') Umaxforum
+							li
+								img(src=require("../../img/zloy.png"))
+								a(href='#') Zloy

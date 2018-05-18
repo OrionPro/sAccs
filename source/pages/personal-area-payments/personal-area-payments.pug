@@ -1,0 +1,74 @@
+extends ../base
+block title
+	| personal-area-static page
+block main
+	section.own_partner_cabinet
+		.container
+			.title_wrap_h2
+				h2 Личный кабинет партнера
+			.input_button
+				label Ваша партнерская ссылка:
+				input(type='text' title='Имя занято другим юзером' class='switch' value="https://stockaccs.com/?parther=XXXXX" readonly)
+				button.btn-form.btn-switch ИЗМЕНИТЬ
+	.container
+		hr
+	section.menu_profile
+		.container
+			.wrap_menu_profile
+				.menu
+					ul.menu_list
+						li
+							a(href='#') Мой профиль
+						li
+							a(href='#') Статистика
+						li
+							a(href='#') Баланс
+						li.active_item
+							a(href='#') Выплаты
+						li
+							a(href='#') Выход
+				.profile
+					.profile_header ВЫПЛАТЫ СОДЕРЖАТ
+					.profile_header_sub_sec
+						p
+							span.money_quanty 200.0001831 $
+							| Одобренные невыплаченные комиссии.
+					.profile_bodi_table
+						table
+							tr
+								th ID:
+								th Дата:
+								th Сумма операции:
+								th Статус:
+							tr
+								td 58
+								td 23.07.2017
+								td 55 $
+								td.status.succes-green Оплачено
+							tr
+								td 57
+								td 23.07.2017
+								td 5 $
+								td.status.succes-green Оплачено
+							tr
+								td 56
+								td 31.12.2017
+								td 55 $
+								td.status.error-red Не оплачено
+							tr
+								td 59
+								td 23.07.2017
+								td 999 $
+								td.status.error-red  Не оплачено
+							tr
+								td 59
+								td 13.09.2017
+								td 5 $
+								td.status.succes-green Оплачено
+						.table_pagination
+							.prev_btn
+								i(class="fa fa-angle-left")
+							.next_btn
+								i(class="fa fa-angle-right")
+					.order_payment
+						button.main_btn ЗАКАЗАТЬ ВЫПЛАТУ

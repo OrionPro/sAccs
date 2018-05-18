@@ -1,0 +1,135 @@
+@import "../../sass/vars.sass"
+@import "../personal-area/personal-area.sass"
+
+@keyframes fade
+	from
+		opacity: 0
+	to
+		opacity: 1
+@keyframes fade-bot
+	from
+		opacity: 0
+		transform: translateY(20px)
+	to
+		opacity: 1
+		transform: translateY(0)
+
+.personal-manager-data
+	width: 100%
+	padding: 15px 10px 35px 10px
+	background-color: #f4f5f7
+	box-shadow: 1px 10px 10px rgba(102, 102, 102, 0.35)
+	h4
+		font-size: 14px
+		color: $main_color
+		margin-bottom: 8px
+	dl
+		font-size: 13px
+		margin: 0
+		dt
+			line-height: 1.2
+		dd
+			line-height: 1.2
+			margin-bottom: 1px
+		a
+			&:hover
+				color: $main_color
+				text-decoration: none
+			&:active
+				color: $main_color
+				text-decoration: none
+			&:focus
+				color: $main_color
+				text-decoration: none
+
+.tabs-items-wrap
+	background-color: #ffffff
+	margin-top: 10px
+	&>.tabs-item
+		text-decoration: none
+		margin-right: 30px
+		&.active
+			border: 1px solid #aaaaac
+			border-bottom: 1px solid #fff
+			border-radius: 10px 10px 0 0
+.tabs-item
+	height: 34px
+	line-height: 34px
+	padding-left: 10px
+	padding-right: 10px
+	display: inline-block
+	color: #3a4763
+	font-size: 14px
+	z-index: 1
+	position: relative
+	top: 2px
+	transition: color 300ms linear;
+	&:last-of-type
+		margin-right: 0
+	&.active
+		color: $main_color
+		text-decoration: none
+	&:hover
+		color: $main_color
+		text-decoration: none
+	&:active
+		color: $main_color
+		text-decoration: none
+	&:focus
+		color: $main_color
+		text-decoration: none
+
+.tabs-wrap
+	display: none
+	margin-bottom: 20px
+	padding: 20px
+	background-color: rgba(255, 255, 255,0.5)
+	border: 1px solid #aaaaac
+	border-radius: 0 0 10px 10px
+.tabs-wrap.active
+	display: block
+	animation: fade
+	animation-duration: 0.7s
+
+.tabs-wrap-inner
+	display: none
+	margin-bottom: 20px
+.tabs-items-wrap-inner
+	margin-bottom: 20px
+	.tabs-item
+		text-decoration: underline
+		&.active
+			color: $main_color
+			text-decoration: none
+.tabs-wrap-inner.active
+	display: block
+	animation: fade-bot
+	animation-duration: 0.7s
+	animation-delay: 0.3s
+	animation-fill-mode: backwards
+.hide-code
+	font-size: 18px
+	margin-bottom: 20px
+	display: inline-block
+	color: #3a4763
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+		color: $main_color
+	&:active
+		text-decoration: none
+		color: $main_color
+	&:focus
+		text-decoration: none
+		color: $main_color
+.affiliate-links
+	margin-bottom: 60px
+	.affiliate-links__link
+		min-height: 80px
+		padding: 20px 50px 20px 20px
+		background-color: #f4f5f7
+		line-height: 1.2
+		span
+			font-size: 16px
+			color: #3a4763
+@import '../../sass/_media.sass'

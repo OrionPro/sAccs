@@ -1,0 +1,324 @@
+extends ../base
+block title
+	| Index page
+block main
+	section.map_index
+		h1 Магазин аккаунтов&#160
+			span Stockaccs
+	section.index_main
+		.container
+			.table_tabs_wrap
+				.table_body
+					.table_item.main
+						.ti_header
+							.serv СЕРВИС
+							.amount КОЛИЧЕСТВО
+							.price ЦЕНА ЗА&#160
+								span 1К АККАУНТОВ
+							.currency
+								.currency_rub.active_curr
+									a(href='#') RUB
+								.currency_usd
+									a(href='#') USD
+								.currency_eur
+									a(href='#') EUR
+						.ti_body
+							.ti_body_title
+								.ti_body_a
+									a(href='#')
+										.img-wrap
+											img(src=require("../../img/logo-mail-ru.png"))
+										span YANDEX
+								.ti_body_row
+									.ti_body_name МУЖ. ИМЕНА
+									.ti_body_quanty 0
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.9 $ | 10K-50K: 232323.8 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+								.ti_body_row
+									.ti_body_name NO SPAM
+									.ti_body_quanty 0
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.9 $ | 10K-50K: 3232.8 $ |
+									.ti_body_form
+										form
+											.main_table_tooltip_input
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+								.ti_body_row
+									.ti_body_name МОЙ МИР
+									.ti_body_quanty 0
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.9 $ | 10K-50K: 1.8 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+								.ti_body_row
+									.ti_body_name НА ДОМЕНЕ @ВК.RU
+									.ti_body_quanty 999999
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.9 $ | 10K-50K: 1.2323 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+					.table_item
+						.ti_header
+							.serv СЕРВИС
+							.ammount КОЛИЧЕСТВО
+							.price ЦЕНА ЗА&#160
+								span 1 АККАУНТ
+						.ti_body
+							.ti_body_title
+								.ti_body_a
+									a(href='#')
+										.img-wrap
+											img(src=require("../../img/logo-mail-ru.png"))
+										span YANDEX
+								.ti_body_row
+									.ti_body_name YANDEX.RU ДЛЯ KEY-COLLECTORA
+									.ti_body_quanty 9999
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.33232 $ | 10K-50K: 1232323 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+								.ti_body_row
+									.ti_body_name ЯНДЕКС + ТЕЛЕФОН
+									.ti_body_quanty 9999
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.9 $ | 10K-50K: 1.8 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+							hr
+							.ti_body_title
+								.ti_body_a
+									a(href='#')
+										.img-wrap
+											img(src=require("../../img/logo-mail-ru.png"))
+										span YANDEX
+								.ti_body_row
+									.ti_body_name YANDEX.RU ДЛЯ KEY-COLLECTORA
+									.ti_body_quanty 0
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.9 $ | 10K-50K: 1.8 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+								.ti_body_row
+									.ti_body_name ЯНДЕКС + ТЕЛЕФОН
+									.ti_body_quanty 9999
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 1.9 $ | 10K-50K: 1.8 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+							hr
+							.ti_body_title
+								.ti_body_a
+									a(href='#')
+										.img-wrap
+											img(src=require("../../img/logo-mail-ru.png"))
+										span YANDEX
+								.ti_body_row
+									.ti_body_name YANDEX.RU ДЛЯ KEY-COLLECTORA
+									.ti_body_quanty 0
+									.ti_body_price 1-1K: 2.1 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+								.ti_body_row
+									.ti_body_name ЯНДЕКС + ТЕЛЕФОН
+									.ti_body_quanty 9999
+									.ti_body_price 1-1K: 2.1 $ | 1K-10K: 222.922 $ | 10K-50K: 1.228 $ |
+									.ti_body_form
+										form
+											input(type='text' placeholder='0')
+											button.buy_btn Купить
+							.flipping_through
+								h5 Листайте
+								ul.pagginations_list
+									li.active_dot
+										a
+									li
+										a
+									li
+										a
+									li
+										a
+									li
+										a
+				.tabs_body
+					.title_wrap
+						h5 Категории аккаунтов:
+					.tabs_body_accordion
+						.tba_item
+							.tba_item_button
+								span СОЦИАЛЬНЫЕ СЕТИ
+								i(class="fa fa-angle-down")
+							.tba_item_body
+								ul.tba_item_body_list
+									li
+										a(href='#')
+											img(src=require("../../img/FB.png"))
+											span Facebook
+									li
+										a(href='#')
+											img(src=require("../../img/INSTA.png"))
+											span Instagram
+									li
+										a(href='#')
+											img(src=require("../../img/odn.png"))
+											span Odnoklassniki
+									li
+										a(href='#')
+											img(src=require("../../img/TWITTWR.png"))
+											span Twitter
+									li
+										a(href='#')
+											img(src=require("../../img/vk.png"))
+											span Vkontakte
+						.tba_item
+							.tba_item_button
+								span СОЦИАЛЬНЫЕ СЕТИ
+								i(class="fa fa-angle-down")
+							.tba_item_body
+								ul.tba_item_body_list
+									li
+										a(href='#')
+											img(src=require("../../img/FB.png"))
+											span Facebook
+									li
+										a(href='#')
+											img(src=require("../../img/INSTA.png"))
+											span Instagram
+									li
+										a(href='#')
+											img(src=require("../../img/odn.png"))
+											span Odnoklassniki
+									li
+										a(href='#')
+											img(src=require("../../img/TWITTWR.png"))
+											span Twitter
+									li
+										a(href='#')
+											img(src=require("../../img/vk.png"))
+											span Vkontakte
+						.tba_item
+							.tba_item_button
+								span СОЦИАЛЬНЫЕ СЕТИ
+								i(class="fa fa-angle-down")
+							.tba_item_body
+								ul.tba_item_body_list
+									li
+										a(href='#')
+											img(src=require("../../img/FB.png"))
+											span Facebook
+									li
+										a(href='#')
+											img(src=require("../../img/INSTA.png"))
+											span Instagram
+									li
+										a(href='#')
+											img(src=require("../../img/odn.png"))
+											span Odnoklassniki
+									li
+										a(href='#')
+											img(src=require("../../img/TWITTWR.png"))
+											span Twitter
+									li
+										a(href='#')
+											img(src=require("../../img/vk.png"))
+											span Vkontakte
+						.tba_item
+							.tba_item_button
+								span СОЦИАЛЬНЫЕ СЕТИ
+								i(class="fa fa-angle-down")
+							.tba_item_body
+								ul.tba_item_body_list
+									li
+										a(href='#')
+											img(src=require("../../img/FB.png"))
+											span Facebook
+									li
+										a(href='#')
+											img(src=require("../../img/INSTA.png"))
+											span Instagram
+									li
+										a(href='#')
+											img(src=require("../../img/odn.png"))
+											span Odnoklassniki
+									li
+										a(href='#')
+											img(src=require("../../img/TWITTWR.png"))
+											span Twitter
+									li
+										a(href='#')
+											img(src=require("../../img/vk.png"))
+											span Vkontakte
+	section.other_main
+		.container
+			.share_link
+				p.share_link_p Поделитесь ссылкой на сервис в своих социальных сетях:
+				.link_list
+					ul
+						li google
+						li facebook
+						li twitter
+			.form_valid_wrap
+				.form_container
+					p Если в магазине нет нужного Вам количества аккаунтов или мы еще не добавили вид аккаунтов который Вам нужен, заполните данную форму и мы с Вами свяжемся:
+					form
+						input(type='hidden')
+						.alert-danger.name-feedbacks
+							.feedbacks-name
+						.form_akk_name
+							.form-group.field-akk_name.required.has-error
+								label.control-label Вид аккаунтов
+								input(type='text').input.input_big
+								.help-block
+						.alert-danger.email-feedbacks
+							.feedbacks-email
+						.form_quantyti
+							.form-group.field-quantyti.required.has-error
+								label.control-label Количество
+								input(type='text').input.input_big
+								.help-block
+						.alert-danger.feedback-feedbacks
+							.feedbacks-feedback
+						.form_user_email
+							.form-group.field-user_email.required.has-error
+								label.control-label Эллектронный адрес
+								input(type='text').input.input_big
+								.help-block
+						.form_user_email
+							.form-group.field-accountsnotavailableindex-form_name.has-success
+								label.control-label
+								input(type='hidden').input.input_big
+								.help-block
+						// это для капча
+						.form-group.field-accountsnotavailableindex-recaptcha
+							| Капча
+						.form-group
+							button(type='submit').btn-form Отправить
+						.contacts-validate
+				.valid_container
+					p По поводу невалида аккаунтов, по вопросам цен объемов, аккаунтов в других сервисах - пишите на почту: 
+						a(href='#') support@stockaccs.com
+					.img_wrap
+						img(src=require("../../img/warning.png"))
+					p Внимание: претензии валидности аккаунтов только в день покупки и несколько дней после регистрации.
+			.main_article
+				article
+					h4 Добро пожаловать в магазин качественных аккаунтов Stockaccs!
+					p У нас вы купите необходимое колличество аккаунтов для ваших задач. Купить аккаунты на stockaccs.com вы можете воспользовавшись любым удобным видом оплаты. Мы принимаем к оплате все возможные электронные платежные системы, криптовалюты и карты. Купленные аккаунты Вы получаете на почту сразу же после оплаты.
+					p Все наши аккауны регестрируются с помощью нашего специального ПО разработаного нашими специалистами, на персональных прокси. Мы постоянно следим за качеством аккаунтов, проверяем на ограничения и баны, при малейших сомнения в валидности аккаунты уходят в отлежку и через время снова проверяются.
+					p В последнее время все более восстребоваными становятся аккаунты для социальных сетей. И это не удивительно, так как соц. сети отличное место для заработка на накрутках, рассылках или просто спаме по личкам, коментариям, стенам. Мы предлогаем аккаунты во всех популярных социальных сетях: Вконтакте, Инстаграм, Одноклассники, Твиттер, Гугл плюс.
+					p Так же на Stockaccs вы найдете аккаунты для большинства почтовых ящиков, самые популярные из них Gmail.com, Mail.ru, Meta.ua, Yahoo, hotmail они отлично подходят для всех видов регистраций и рассылок сообщений.
+
+
+
+
+

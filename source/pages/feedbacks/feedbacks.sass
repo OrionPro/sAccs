@@ -1,0 +1,112 @@
+@import "../../sass/vars.sass"
+
+
+.feedbacks-section
+	padding-top: $indent_top
+	.feedbacks_list
+		.fl_item
+			padding-top: 40px
+			display: flex
+			.logo_red
+				width: 170px
+				margin-right: 30px
+			.fl_body
+				width: 83%
+				.user_data_dots
+					display: flex
+					justify-content: space-between
+					align-items: flex-start
+					padding-bottom: 30px
+					.user_name
+						font-size: 27px
+					.feedback_data
+						font-size: 20px
+						color: gray
+				.feedback-text
+					padding-bottom: 40px
+					font-size: 15px
+					min-height: 100px
+	.loader_more
+		padding-top: 40px
+		text-align: center
+		a
+			color: $main_color_red
+			transition: $trans
+			position: relative
+			&::after
+				content: ""
+				/* style */
+				position: absolute
+				bottom: -2px
+				left: 0
+				right: 0
+				width: 0
+				height: 1px
+				background: $main_color_red
+				transition: $trans
+				margin: 0 auto
+			&:hover::after
+				width: 100%
+.form_opinion
+	padding:
+		top: 50px
+		bottom: 100px
+	.title_wrap
+		font-size: 25px
+	.form_opinion_wrap
+		display: flex
+		justify-content: space-between
+		.form_container
+			width: 48%
+			form
+				label
+					display: block
+				input,textarea
+					width: 100%
+					resize: none
+					height: 25px
+					padding-left: 10px
+					border-radius: 5px
+					transition: $trans
+					border: 1px solid gray
+					margin-bottom: 18px
+					font-weight: lighter
+					&:focus
+						border: 1px solid $main_color_red
+				textarea
+					height: initial
+				button
+					margin-top: 36px
+					width: 300px
+		.opinion
+			width: 46%
+			.opinion_text
+				padding-bottom: 30px
+				h4
+					margin-bottom: 0
+			.resourse-list
+				li
+					padding-top: 10px
+					img
+						padding-right: 20px
+					a
+						color: $main_color_red
+						transition: $trans
+						position: relative
+						&::after
+							content: ""
+							/* style */
+							position: absolute
+							bottom: -2px
+							left: 0
+							right: 0
+							width: 0
+							height: 1px
+							background: $main_color_red
+							transition: $trans
+							margin: 0 auto
+						&:hover::after
+							width: 100%
+// media
+
+@import '../../sass/_media.sass'

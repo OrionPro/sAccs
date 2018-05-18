@@ -1,0 +1,228 @@
+doctype html
+html(class="no-js" lang="ru")
+	head
+		meta(charset = 'utf-8')
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		title
+			block title
+		link(rel="shortcut icon" href=require("../../img/favicon.png") type="image/x-icon")
+		include ../libs/bootstrap.min.html
+		style(type='text/css').
+			html .loader {
+				background: #fff;
+				bottom: 0;
+				height: 100%;
+				left: 0;
+				position: fixed;
+				right: 0;
+				top: 0;
+				width: 100%;
+				z-index: 9999
+			}
+			html .loader .loader_inner {
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-color: #fff;
+				height: 200px;
+				width: 200px;
+				margin-top: -100px;
+				margin-left: -100px;
+				left: 50%;
+				top: 50%;
+				position: absolute
+			}
+	// Весь внутренний контент страницы
+	// второй класс у body это анимация на модалке (animated-transition-effects гуглануть или спросить меня, убрав класс вернётся обычная анимация модалки, без изысков)
+	body
+		block header
+			header(class="header")
+				.modal_index
+					.modal_window
+						i(class="fa fa-times-circle-o")
+						p К сожалению, на данный момент у нас нет нужного количества аккаунтов:
+						.good_absent SMS+SMTP+POP3+IMAP
+						.e_mail_p
+							p Напишите Ваш e-mail и желаемое количество.
+							span Наш менеджер свяжется с вами в ближайшее время.
+						.form_modal
+							form
+								input(type='e-mail' name='email' placeholder='E-mail')
+								.wrap_input_button
+									input(type='text' name='name')
+									input(type='submit' class='btn-form')
+					.overlay
+				.modal_buyakkaynt
+					.modal_window
+						i(class="fa fa-times-circle-o close-modal-buyakkaynt")
+						p.modal_buyakkaynt__title Оплата:
+						p.modal_buyakkaynt__txt
+							| Аккаунты Vk.com [авторег, РФ, тел:пасс] Женский + фото
+							| (привязан к телефону)
+						.form_modal
+							form
+								.modal_buyakkaynt__input-wrap
+									label E-mail:
+									input(type='e-mail' name='email')
+								.modal_buyakkaynt__input-wrap
+									label Количество:
+									input(type='text' name='' class="quantity" placeholder="123")
+								.modal_buyakkaynt__input-wrap.last
+									label Способ оплаты:
+									.select
+										.slct_arrow
+											i.fa.fa-angle-down
+										a(href="#" class="slct") WebMoney
+										ul.drop
+											li WebMoney
+											li Yandex-деньги
+											li Scrill
+								.divider
+								.modal_buyakkaynt__input-wrap
+									a(href="#" class="modal-promo") Есть промокод?
+									input(type='text' name='' class="code" placeholder="Код скидки")
+								.modal_buyakkaynt__input-wrap.last-big-margin
+									label К оплате:
+									span.bold-text 87 руб.
+								.modal_buyakkaynt__btn-wrap
+									button(type="submit" class="buy_btn") ПЕРЕЙТИ К ОПЛАТЕ
+					.overlay
+				.modal_buyakkaynt2
+					.modal_window
+						i(class="fa fa-times-circle-o close-modal-buyakkaynt2")
+						p.modal_buyakkaynt__title Оплата:
+						p.modal_buyakkaynt__txt
+							| Аккаунты Vk.com [авторег, РФ, тел:пасс] Женский + фото
+							| (привязан к телефону)
+						.form_modal
+							form
+								.modal_buyakkaynt__input-wrap
+									label E-mail:
+									span.inner-txt efimenko.i.d@gmail.com
+								.modal_buyakkaynt__input-wrap
+									label Количество:
+									span.inner-txt 123
+								.modal_buyakkaynt__input-wrap.last
+									label К оплате:
+									span.bold-text 87 руб.
+								.modal_buyakkaynt__input-wrap.last-big-margin
+									label
+										| Кошелек для
+										br
+										| перевода:
+									input(type='text' name='' placeholder="+7885242256555")
+								.modal_buyakkaynt__input-wrap.last-big-margin
+									label
+										| Примечание:
+									input(type='text' name='' placeholder="480149")
+								.modal_buyakkaynt__alert
+									| #[b Внимание!] Очень важно, чтобы Вы переводили деньги с
+									| этим примечанием, иначе средства не будут зачислены
+									| автоматически.
+								.divider
+								.modal_buyakkaynt__btn-wrap.no-center
+									button(type="button" class="buy_btn transparent") ПРОВЕРИТЬ ОПЛАТУ
+									span 00:25
+									button(type="submit" class="buy_btn pay") ОПЛАТИТЬ
+					.overlay
+				.modal_payments
+					.modal_window
+						i(class="fa fa-times-circle-o")
+						p ВЫВОД СРЕДСТВ:
+						.your_curr_count
+							| Ваш счет:
+							span.curr_payment
+						.form_modal
+							form.extended_submit
+								input(type='text' name='text' class='payments_modal_input' title='Сумма вывода не может превышать сумму на Вашем счету' placeholder='Введите сумму')
+								.select
+									.slct_arrow
+										i.fa.fa-angle-down
+									a(href="#" class="slct") WebMoney
+									ul.drop
+										li WebMoney
+										li Yandex-деньги
+										li Scrill
+								input(type='submit' class='btn-form extended_submit')
+					.overlay
+				.container
+					.header_wrap
+						.logo
+							a(href='#')
+								img(src=require("../../img/logo.png"))
+						.menu_contacts_wrap
+							.menu
+								ul.menu_list
+									li
+										a(href='#') Главная
+									li
+										a(href='#') Условия продажи
+									li
+										a(href='#') Отзывы
+									li.services
+										a(href='#') Сервисы
+										i(class="fa fa-angle-down")
+									li
+										a(href='#') Контакты
+									li
+										a(href='#') Поддержка
+									li.langruage
+										img(src=require("../../img/flag-ru.png"))
+							.contacts
+								ul.contacts_list
+									li
+										img(src=require("../../img/icq-hed.png"))
+										span 711-578-593
+									li
+										img(src=require("../../img/mail-hed.png"))
+										span support@stockaccs.com
+									li
+										img(src=require("../../img/skype-hed.png"))
+										span live:stockaccs.com
+		block main
+		block footer
+			// Секция footer
+			footer.footer
+				.container
+					.logo_footer
+						a(href='#')
+							img(src=require("../../img/logo-footer.png"))
+					.footer_links
+						ul.links_list
+							li
+								a(href='#') Главная
+							li
+								a(href='#') Условия продажи
+							li
+								a(href='#') Контакты
+							li
+								a(href='#') Отзывы
+							li
+								a(href='#') Поддержка
+							li
+								a(href='#') Партнерская программа
+					.footer_contacts
+						ul.contacts_list
+							li
+								a(href='#')
+									img(src=require("../../img/icq.png"))
+									span 711-578-593
+							li
+								a(href='#')
+									img(src=require("../../img/mail.png"))
+									span support@stockaccs.com
+							li
+								a(href='#')
+									img(src=require("../../img/skype.png"))
+									span live:stockaccs.com
+					.footer_creator
+						a(href='#')
+							h5 Создание сайта:
+							img(src=require("../../img/el_std3.png"))
+	//[if IE 9]>
+		<script src="libs/html5shiv/es5-shim.min.js"></script>
+		<script src="libs/html5shiv/html5shiv.min.js"></script>
+		<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
+		<script src="libs/respond/respond.min.js"></script>
+
+

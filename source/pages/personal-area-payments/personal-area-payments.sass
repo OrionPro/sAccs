@@ -1,0 +1,53 @@
+@import "../../sass/vars.sass"
+@import "../personal-area/personal-area.sass"
+
+.profile_header_sub_sec
+	padding: 20px 0
+	p
+		font-size: 16px
+		padding: 15px 0
+		span
+			font-weight: bold
+			color: $main_color_red
+			padding-right: 40px
+.profile_bodi_table
+	padding: 15px 30px 30px
+	border: 1px solid black
+	border-radius: 10px
+	table
+		width: 100%
+		tr
+			border-bottom: 1px solid darken($background_gray,15%)
+			&:last-of-type
+				/* style */
+				border-bottom: none
+			th
+				font-size: 18px
+				font-weight: bold
+				padding: 15px 0
+			td
+				padding: 15px 130px 15px 0
+			.status
+				&.succes-green
+					color: $main_green
+				&.error-red
+					color: $main_color_red
+	.table_pagination
+		padding-top: 10px
+		div
+			display: inline-block
+			margin-right: 10px
+			cursor: pointer
+			.fa
+				color: $main_color_red
+				font-size: 2rem
+				font-weight: lighter
+				transition: $trans
+				&:hover
+					/* style */
+					color: lighten($main_color_red,20%)
+.order_payment
+	padding-top: 35px
+	button
+		border-radius: 20px
+@import '../../sass/_media.sass'

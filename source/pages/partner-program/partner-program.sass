@@ -1,0 +1,104 @@
+@import "../../sass/vars.sass"
+
+.partnership_program
+	padding-top: $indent_top
+	.program_list
+		display: flex
+		padding:
+			bottom: 60px
+		.list_item
+			display: flex
+			justify-content: space-between
+			.list_item_logo
+				width: 130px
+				height: 130px
+				border-radius: 50%
+				border: 1px solid $main_color_red
+				text-align: center
+				line-height: 130px
+			.list_item_text
+				width: 270px
+				padding: 0 20px
+				h4
+					font-weight: bold
+					padding-bottom: 20px
+.program_registration
+	padding-bottom: 50px
+	.program_form
+		width: 630px
+		margin: 0 auto
+		text-align: center
+		padding: 50px 0
+		background: $main_color_gray
+		box-shadow: 3px 7px 5px 0px rgba(50, 50, 50, 0.5)
+		.pr_title
+			padding-bottom: 50px
+			h4,p
+				font-size: 25px
+			h4
+				color: $main_color_red
+		a
+			margin: 0 auto
+		.pr_links
+			padding-top: 50px
+			margin-bottom: 50px
+			i
+				color: $main_color_red
+				font-size: 1.5rem
+			a
+				font-weight: bold
+				font-size: 16px
+				padding-left: 30px
+			.personal-cab
+				padding-bottom: 25px
+.become_our_partner
+	padding:
+		top: 25px
+		bottom: 85px
+	.title_wrap_h2
+		h2
+			color: $main_color_red
+			font-size: 25px
+		p
+			font-size: 14px
+	.how_it_works
+		h4
+			font-weight: bold
+			font-size: 18px
+			padding-top: 25px
+		.numerical_style,ul
+			padding:
+				top: 20px
+				left: 20px
+			li
+				&::before
+					content: attr(data-num)
+					/* style */
+					color: $main_color_red
+					padding-right: 5px
+		ul
+			li
+				&::before
+					content: "\f00c"
+					font-family: 'FontAwesome'
+					color: $main_color_red
+					padding-right: 5px
+		p
+			padding-top: 20px
+			font-weight: bold
+			font-size: 17px
+	.forbbiden
+		padding-top: 20px
+		span
+			display: block
+			font-size: 15px
+			font-weight: bold
+			padding-bottom: 20px
+		p
+			font-size: 15px
+			span
+				display: inline
+				font-weight: bold
+				padding-right: 5px
+
+@import '../../sass/_media.sass'

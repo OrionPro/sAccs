@@ -1,0 +1,33 @@
+extends ../base
+block title
+	| buyakkaynt
+block main
+	section.buyakkaynt_main
+		.container
+			.wrapper
+				p кнопка проверки новых модалок
+					button.buyakkaynt модалка оплата
+					button.buyakkaynt2 модалка оплата2
+				.buyakkaynt_form
+					h4 Вы собираетесь приобрести 3 аккаунта Муж. имена:
+					.payment_currency_exchange
+					form
+						label
+						input
+						label
+						.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct") Yandex-деньги
+							ul.drop
+								li WebMoney
+								li Yandex-деньги
+								li Scrill
+						a(href='#' class='promokod')
+						input(type='checkbox' id ='i_am_agry')
+						label(for='i_am_agry') Я согласен с условиями покупки аккаунтов.
+						input(type='checkbox' id ='i_am_understand')
+						label(for='i_am_understand') Я согласен с условиями покупки аккаунтов.
+						p *Ссылка на получение аккаунтов будет отправлена на указанный Вами E-mail.
+						input(type='submit' class='btn-form')
+				.sales_conditions

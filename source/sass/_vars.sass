@@ -1,0 +1,206 @@
+@import "fonts"
+@import 'sprite'
+
+$main_color: #bb0b3a
+$main_txt_color: #000
+$auxiliary-txt-color: #fff
+$main-bg-color: #fff
+$main_color_gray: #f4f5f7
+$button_bg_gray: #efefef
+$background_gray: #f4f5f7
+$main_color_gray: #666875
+$main_black: #36394a
+$main_green: #35be70
+$main_color_red: #bb0b3a
+$main_red_shadow: inset 1px 1px 10px 0px rgba(187, 11, 58, 0.3), 1px 1px 10px 0px rgba(187, 11, 58, 0.3)
+$tooltipster_bg_color: #e8e8e8
+$font_main_regular: "RobotoRegular",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+
+//paddings
+$indent_top: 200px
+
+$trans: all 300ms linear
+// Миксины font и fz переделывают px в rem
+@mixin font($color, $fz, $ff, $lh: 1.6)
+	color: $color
+	font-size: $fz + px
+	font-size: ($fz/16) + rem
+	font-family: $ff
+	line-height: $lh
+
+@mixin fz($font_px)
+	font-size: $font_px + px
+	font-size: ($font_px/16) + rem
+
+@mixin pseudo($display: block, $pos: absolute, $content: '')
+	content: $content
+	display: $display
+	position: $pos
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false)
+	@include pseudo($pos: $position)
+	width: 0
+	height: 0
+	@if $round
+		border-radius: 3px
+	@if $direction == down
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-top: $size solid $color
+		margin-top: 0 - round( $size / 2.5 )
+	@else if $direction == up
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-bottom: $size solid $color
+		margin-bottom: 0 - round( $size / 2.5 )
+	@else if $direction == right
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-left: $size solid $color
+		margin-right: -$size
+	@else if  $direction == left
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-right: $size solid $color
+		margin-left: -$size
+	@else if  $direction == angle
+		border-left: 0px solid transparent
+		border-right: 25px solid transparent
+		border-top: 10px solid $color
+		margin-top: 0 - round( 10px / 2.5 )
+@mixin truncate($truncation-boundary)
+	max-width: $truncation-boundary
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+.buy_btn
+	width: 90px
+	height: 27px
+	border-radius: 20px
+	border: none
+	color: #fff
+	background: $main_color_red
+	text-align: center
+	line-height: 27px
+	font-size: 16px
+	outline: none
+	transition: $trans
+	font-weight: lighter
+	&:hover
+		outline: 0
+		background: lighten($main_color_red,15%)
+		color: darken($main-bg-color,15%)
+	&:active
+		outline: 0
+	&:focus
+		outline: 0
+.btn_a
+	width: 230px
+	height: 50px
+	line-height: 50px
+	text-align: center
+	border-radius: 20px
+	display: block
+	color: #fff
+	background: $main_color_red
+	font-size: 12px
+	transition: $trans
+	&:hover
+		/* style */
+		outline: none
+		background: lighten($main_color_red,15%)
+		color: darken($main-bg-color,15%)
+.btn-form
+	width: 170px
+	height: 50px
+	color: #fff
+	background: $main_color_red
+	border-radius: 20px
+	border: none
+	transition: $trans
+	&:hover
+		text-decoration: none
+		background: lighten($main_color_red,15%)
+		color: darken($main-bg-color,15%)
+		outline: none
+	&:active
+		text-decoration: none
+		outline: none
+	&:focus
+		text-decoration: none
+		outline: none
+
+.main_btn
+	min-width: 272px
+	height: 49px
+	line-height: 49px
+	padding: 0 5px
+	border: 1px solid transparent
+	background-color: $main_color
+	text-transform: none
+	border-radius: 5px
+	@include font(#fff, 16, $font_main_regular)
+	transition: 0.5s
+	&:hover
+		background-color: #fff
+		border: 1px solid $main_color
+		color: $main_color
+	&:active
+		background-color: #fff
+		border: 1px solid $main_color
+		color: $main_color
+	&:focus
+		background-color: #fff
+		border: 1px solid $main_color
+		color: $main_color
+		outline: 0
+.btn_plus
+	width: 70px
+	height: 50px
+	background: $main_color_red
+	color: $main-bg-color
+	font-size: 45px
+	border-radius: 10px
+	border: none
+	position: relative
+	transition: $trans
+	&::before
+		content: "+"
+		/* style */
+		position: absolute
+		top: -18%
+		left: 31%
+	&:focus
+		outline: none
+	&:hover
+		/* style */
+		background: lighten($main_color_red,10%)
+		color: lighten($main-bg-color,10%)
+	&.minus
+		line-height: 25px
+		font-size: 50px
+		&::before
+			content: "-"
+			/* style */
+			position: absolute
+			top: 19%
+			left: 38%
+.center
+	text-align: center
+.left
+	text-align: left
+.right
+	text-align: right
+
+
+.flex-center
+	display: flex
+	align-items: center
+	justify-content: center
+
+	
+			
+
+
+
+

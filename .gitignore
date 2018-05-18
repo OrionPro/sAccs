@@ -1,0 +1,4 @@
+# ignore node-modules
+/node_modules/*
+/build/*
+/webpack_template-master/node_modules/*

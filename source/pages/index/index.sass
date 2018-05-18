@@ -1,0 +1,311 @@
+@import "../../sass/vars.sass"
+
+h1
+	@include font($main_color, 57, $font_main_regular, 1.2)
+h2
+	font-size: 60px
+.index_main
+	padding:
+		top: 470px
+		bottom: 20px
+.table_tabs_wrap
+	display: flex
+	justify-content: space-between
+.table_body
+	width: 75%
+.tabs_body
+	width: 25%
+.table_item
+	padding-top: 30px
+	&.main
+		.ti_header
+			justify-content: space-between
+			div
+				margin-right: 0
+				color: #fff
+	.ti_header
+		background: $main_black
+		padding: 20px 30px
+		display: flex
+		align-items: center
+		border-radius: 10px
+		margin-bottom: 15px
+		div
+			font-size: 14px
+			margin-right: 90px
+			color: #fff
+			&:last-of-type
+				/* style */
+				margin-right: 0
+		.price
+			span
+				color: lighten($main_color_red, 15%)
+				text-decoration: underline
+		.amount
+			padding-left: 25px
+		.currency
+			display: flex
+			div
+				width: 75px
+				height: 25px
+				border-radius: 15px
+				background: $button_bg_gray
+				text-align: center
+				line-height: 25px
+				margin-right: 5px
+				transition: $trans
+				&:hover
+					/* style */
+					background: $main_color_red
+				&:hover a
+					color: #fff
+				a
+					font-size: 16px
+					transition: $trans
+				&.active_curr
+					background: $main_color_red
+					a
+						color: #fff
+.ti_body
+	padding: 20px 30px 30px
+	border-radius: 10px
+	border: 1px solid black
+	.ti_body_title
+		padding:
+			top: 25px
+			bottom: 35px
+		&:first-of-type
+			/* style */
+			padding-top: 0
+		.ti_body_a
+			width: 170px
+			border: 1px solid $main_color_red
+			border-radius: 22px
+			transition: $trans
+			cursor: pointer
+			overflow: hidden
+			box-shadow: $main_red_shadow
+			&:hover
+				/* style */
+				box-shadow: none
+			a
+				display: flex
+				align-items: center
+				.img-wrap
+					display: inline-block
+					width: 42px
+					height: 42px
+					line-height: 40px
+					text-align: center
+					box-sizing: border-box
+					background: $main_color_red
+					border-radius: 50%
+					transition: $trans
+				span
+					padding-right: 10px
+					color: $main_color_red
+					transition: $trans
+					padding-left: 20px
+		.ti_body_row
+			display: flex
+			justify-content: space-between
+			.ti_body_name
+				width: 150px
+			.ti_body_quanty
+				width: 55px
+				text-align: center
+				color: $main_color_red
+			.ti_body_price
+				font-weight: bold
+				width: 355px
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+			div
+				padding-top: 25px
+				color: black
+				font-size: 15px
+			.ti_body_form
+				form
+					position: relative
+					input
+						width: 80px
+						height: 25px
+						border: 1px solid black
+						border-radius: 3px
+						margin-right: 35px
+						box-sizing: border-box
+						padding: 3px
+						text-align: center
+						transition: $trans
+						&:focus
+							border-color: $main_color_red
+	.flipping_through
+		padding-top: 15px
+		text-align: center
+		h5
+			font-size: 16px
+			font-weight: lighter
+			color: #000
+		.pagginations_list
+			margin: 0 auto
+			min-width: 10px
+			display: flex
+			justify-content: center
+			align-items: center
+			li
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				background: $main_black
+				margin-right: 10px
+				cursor: pointer
+				transition: $trans
+				&:hover
+					/* style */
+					background: $main_color_red
+				&:last-of-type
+					/* style */
+					margin-right: 0
+				&.active_dot
+					background: $main_color_red
+.tabs_body
+	padding:
+		top: 30px
+		left: 40px
+	.title_wrap
+		padding-top: 15px
+		h5
+			color: black
+			font-size: 16px
+			font-weight: lighter
+	.tabs_body_accordion
+		padding-top: 30px
+		.tba_item
+			padding-top: 25px
+			width: 100%
+			&:first-of-type
+				/* style */
+				padding-top: 0
+			.tba_item_button
+				width: 100%
+				height: 40px
+				display: flex
+				border: 1px solid $main_color_red
+				box-shadow: $main_red_shadow
+				color: $main_color_red
+				border-radius: 20px
+				justify-content: space-between
+				align-items: center
+				padding: 0 15px
+				cursor: pointer
+				transition: $trans
+				user-select: none
+				&:hover
+					/* style */
+					box-shadow: none
+				span
+					font-size: 14px
+				i
+					font-size: 2rem
+					transition: $trans
+					&.rotate_i
+						transform: rotate(180deg)
+			.tba_item_body
+				display: none
+				&.tbai_body_active
+					display: block
+				ul
+					padding:
+						left: 30px
+						top: 10px
+					li
+						padding-top: 10px
+						img
+							margin-right: 10px
+
+.other_main
+	padding-bottom: 100px
+	.share_link
+		padding:
+			bottom: 60px
+		.link_list
+			padding:
+				top: 25px
+			ul
+				li
+					display: inline-block
+					margin-right: 25px
+					&:last-of-type
+						/* style */
+						margin-right: 0
+	.form_valid_wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		padding-bottom: 40px
+		.form_container
+			width: 64.16%
+			padding:
+				top: 25px
+				left: 30px
+				bottom: 30px
+				right: 65px
+			background: $background_gray
+			box-shadow: 3px 7px 5px 0px rgba(50, 50, 50, 0.5)
+			p
+				font-weight: bold
+				padding-bottom: 30px
+			label
+				display: block
+			input[type=text]
+				width: 70%
+				height: 25px
+				padding-left: 10px
+				border-radius: 5px
+				transition: $trans
+				border: 1px solid gray
+				margin-bottom: 18px
+				font-weight: lighter
+				&:focus
+					border: 1px solid $main_color_red
+			button
+				margin-top: 25px
+		.valid_container
+			width: 30.83%
+			background: $main_black
+			padding: 150px 30px
+			box-shadow: 3px 7px 5px 0px rgba(50, 50, 50, 0.5)
+			p
+				font-size: 14px
+				color: #fff
+				height: 65px
+				overflow: hidden
+				a
+					color: #fff
+					text-decoration: underline
+			.img_wrap
+				padding: 25px 0
+				text-align: center
+	.main_article
+		font-size: 14px
+		p
+			padding-bottom: 20px
+			&:last-of-type
+				/* style */
+				padding-bottom: 0
+.main_table_tooltip_input
+	width: 119px
+	height: 32px
+	background-color: #e8e8e8
+	border-radius: 5px
+	position: absolute
+	top: -45px
+	left: 30px
+	&:after
+		@include css-triangle(#e8e8e8,angle)
+		top: calc(50% - -20px)
+		left: 10px
+		transition: 0.5s
+// media
+@import '../../sass/_media.sass'

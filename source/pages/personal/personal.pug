@@ -1,0 +1,245 @@
+extends ../base
+block title
+	| personal
+block main
+	section.personal_first
+		.container
+			.title_wrap_h2
+				h2 Личный кабинет
+			.about_customer
+				.client_name_exit
+					h5 Добро пожаловать,&#160
+						span Den1983
+					a(href='#') Выход
+				.your_wallets
+					p Ваши кошельки для выплат:&#160
+						span QIWI:380971312689
+	section.tables
+		.container
+			.tables-header
+				h4 ТРЕБУЮТСЯ АККАУНТЫ НА АКТИВАЦИЮ
+				a(href='#').th-a Предложить свои аккаунты
+			.tables-body
+				table
+					tr
+						th Тип:
+						th Объем:
+						th Цена за шт:
+						th Стоимость:
+						th Действие:
+					tr
+						td GMX.com USA PVA
+						td 500
+						td 0.11 USD
+						td.were_leave_price 55
+						td.accaunts Выполнить
+					tr
+						td Instagram.com Aged Red
+						td 100
+						td 0.7 USD
+						td.were_leave_price 70
+						td.accaunts Выполнить
+			.tables-header
+				h4 СТАТИСТИКА ЗАКАЗОВ
+				.show_orders
+					label Показать заказы:
+					.select
+						.slct_arrow
+							i.fa.fa-angle-down
+						a(href="#" class="slct") Все загруженные
+						ul.drop
+							li Все загруженные1
+							li Все загруженные2
+							li Все загруженные3
+				.how_many_orders
+					label Заказов на странице:
+					input(type='text' readonly value='4')
+				a(href='#').th-a Показать
+			.tables-body
+				table
+					tr
+						th ID :
+						th Дата:
+						th Статус:
+						th Тип:
+						th Действие:
+						th Объем:
+						th Цена за шт:
+						th Аккаунты:
+						th Было/осталось:
+						th К оплате:
+						th Оплачено:
+					tr
+						td 105386
+						td 2017-08-18
+						td Оплачен
+						td Hotmail.com RU PVA
+						td.action
+							i(class="fa fa-trash")
+						td 300
+						td 4.5 QIWI
+						td.accaunts Просмотр
+						td.were_leave_price 300
+						td 1350
+						td Да
+					tr
+						td 105386
+						td 2017-08-18
+						td Оплачен
+						td Hotmail.com RU PVA
+						td.action
+							i(class="fa fa-trash")
+						td 400
+						td 4.5 QIWI
+						td.accaunts Просмотр
+						td.were_leave_price 400
+						td 1350
+						td Да
+					tr
+						td 105386
+						td 2017-08-18
+						td Оплачен
+						td Hotmail.com RU PVA
+						td.action
+							i(class="fa fa-trash")
+						td 500
+						td 4.5 QIWI
+						td.accaunts Просмотр
+						td.were_leave_price 500
+						td 8000
+						td Да
+					tr
+						td 105386
+						td 2017-08-18
+						td Оплачен
+						td Hotmail.com RU PVA
+						td.action
+							i(class="fa fa-trash")
+						td 500
+						td 4.5 QIWI
+						td.accaunts Просмотр
+						td.were_leave_price 500
+						td 8000
+						td Да
+					tr
+				.conclusion
+					ul.conclusion_list
+						li Неоплаченных заказов на странице:&#160
+							span 0
+						li Неоплаченных заказов всего:&#160
+							span 0
+						li К ближайшей выплате:&#160
+							span 0
+				.calculating_of_pay
+					.calculating_of_pay_body
+						h5 Калькулятор выплат:
+						.cop_inputs
+							form
+								label Период с:
+								input(type='date' placeholder='yyyy:mm:dd')
+								label До:
+								input(type='date' placeholder='yyyy:mm:dd')
+								.label_select
+									label Тип:
+									.select
+										.slct_arrow
+											i.fa.fa-angle-down
+										a(href="#" class="slct") Все
+										ul.drop
+											li Все загруженные4
+											li Все загруженные5
+											li Все загруженные6
+								button(type='submit' class='btn-form') Посчитать
+								a(href='#' class='btn-form') Сбросить
+						.cop_conclusion
+							p Всего выплачено:&#160
+								span.wallet-type QIWI &#160
+								span.money-out 184238.32
+				.table-pagination
+					ul.pagination_list
+						li
+							a(href='#') 1
+						li
+							a(href='#') 2
+						li
+							a(href='#') 3
+						li
+							a(href='#') 4
+						li
+							a(href='#') 5
+						li
+							a(href='#') ...
+						li
+							a(href='#' class='last_one') 8
+					a(href='#' class='pagination_go') >&#160>
+			.tables-header
+				h4 СТАТИСТИКА ВЫПЛАТ
+			.tables-body
+				table
+					tr
+						th Дата:
+						th Кошелек:
+						th Сумма:
+						th Комментарий:
+					tr
+						td 2017-08-23
+						td.number_of_wallet 380971312689
+						td.curr_wall
+							span.money_quanty 14880 &#160
+							span.wallet_type QIWI
+						td.comments
+							span оплата заказов
+							ul
+								li
+									span 105386
+									| ,
+							span &#160 - вычет заказов
+							ul
+								li
+									span 105770
+									| ,
+								li
+									span 105731
+									| ,
+						.table-pagination
+					tr
+						td 2017-08-23
+						td.number_of_wallet 380971312689
+						td.curr_wall
+							span.money_quanty 14880 &#160
+							span.wallet_type QIWI
+						td.comments
+							span оплата заказов
+							ul
+								li
+									span 105386
+									| ,
+								li
+									span 105335
+							span &#160 - вычет заказов
+							ul
+								li
+									span 105770
+									| ,
+								li
+									span 105731
+									| ,
+								li
+									span 105486
+				.table-pagination
+					ul.pagination_list
+						li
+							a(href='#') 1
+						li
+							a(href='#') 2
+						li
+							a(href='#') 3
+						li
+							a(href='#') 4
+						li
+							a(href='#') 5
+						li
+							a(href='#') ...
+						li
+							a(href='#' class='last_one') 8
+					a(href='#' class='pagination_go') >&#160>

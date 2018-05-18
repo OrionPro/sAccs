@@ -1,0 +1,199 @@
+@import "../../sass/vars.sass"
+
+.personal_first
+	padding-top: $indent_top
+	.about_customer
+		.client_name_exit
+			h5
+				color: $main_color_red
+				font-size: 18px
+				display: inline-block
+				padding-right: 25px
+			a
+				text-decoration: underline
+				font-size: 18px
+		.your_wallets
+			p
+				font-size: 18px
+.tables
+	padding-top: 50px
+	.tables-header
+		background: $main_black
+		display: flex
+		width: 100%
+		height: 50px
+		justify-content: space-between
+		align-items: center
+		color: $auxiliary-txt-color
+		padding: 0 25px
+		border-radius: 10px
+		margin-bottom: 20px
+		h4
+			font-size: 16px
+		.th-a
+			background: $main_color_red
+			font-size: 12px
+			border-radius: 15px
+			padding: 0 40px
+			height: 25px
+			line-height: 25px
+			cursor: pointer
+			color: $auxiliary-txt-color
+			&:hover
+				/* style */
+				background: lighten($main_color_red,10%)
+				color: darken($auxiliary-txt-color,10%)
+		.show_orders
+			display: flex
+			align-items: center
+			label
+				margin-right: 20px
+			.select
+				.slct_arrow
+					top: 3px
+					.fa
+						color: $main_color_red
+				.slct
+					margin: 0
+					width: 170px
+					height: 28px
+					line-height: 28px
+					padding-left: 5px
+					font-size: 15px
+					border-radius: 5px
+				.drop
+					top: 29px
+					li
+						color: black
+						font-size: 14px
+		.how_many_orders
+			display: flex
+			align-items: center
+			label
+				margin-right: 20px
+			input
+				display: block
+				margin: 0
+				width: 170px
+				padding-left: 5px
+				font-size: 15px
+				border-radius: 5px
+				color: gray
+				border: none
+
+	.tables-body
+		padding: 15px 30px
+		border: 1px solid $main_black
+		border-radius: 10px
+		margin-bottom: 50px
+		table
+			width: 100%
+			tr
+				border-bottom: 1px solid $tooltipster_bg_color
+				&:last-of-type
+					/* style */
+					border-bottom: none
+				th
+					font-weight: bold
+					padding: 15px 10px 15px 0
+				td
+					padding: 15px 10px 15px 0
+					font-weight: lighter
+					.fa-trash
+						font-size: 1.7rem
+				.action
+					text-align: center
+					cursor: pointer
+				.accaunts
+					color: $main_green
+				.were_leave_price
+					color: $main_color_red
+				.comments
+					ul
+						display: inline-block
+						li
+							display: inline-block
+							span
+								color: $main_green
+		.conclusion
+			padding: 25px 0
+			border-bottom: 1px solid $tooltipster_bg_color
+			.conclusion_list
+				font-weight: bold
+				span
+					color: $main_color_red
+		.calculating_of_pay
+			padding-top: 30px
+			.calculating_of_pay_body
+				padding: 25px
+				background: $background_gray
+				h5
+					font-size: 16px
+					margin: 0
+				.cop_inputs
+					padding: 22px 0 30px
+					form
+						display: flex
+						justify-content: space-between
+						align-items: center
+						label
+							color: $main_color_gray
+							font-size: 14px
+						input
+							width: 170px
+							height: 30px
+							padding: 0 6px
+							background: #fff
+							border-radius: 8px
+							border: 1px solid gray
+							color: gray
+						.label_select
+							display: flex
+							justify-content: space-between
+							align-items: center
+							label
+								margin-right: 20px
+							.select
+								.slct
+									width: 170px
+									height: 30px
+									line-height: 30px
+									padding: 0 6px
+									margin: 0
+									background: #fff
+									border-radius: 8px
+									border: 1px solid gray
+								.slct_arrow
+									.fa
+										color: $main_color_red
+								.drop
+									li
+										font-size: 14px
+						.btn-form,input[type=submit]
+							width: 140px
+							height: 40px
+							text-align: center
+							line-height: 40px
+							padding: 0
+				.cop_conclusion
+					span
+						color: $main_color_red
+		.table-pagination
+			padding-top: 30px
+			display: flex
+			.pagination_list
+				margin-right: 5px
+				li
+					display: inline-block
+					padding-right: 10px
+					a
+						color: black
+						font-weight: bold
+						transition: $trans
+						&:hover
+							/* style */
+							color: gray
+			.pagination_go
+				color: $main_color_red
+
+@import '../../sass/_media.sass'

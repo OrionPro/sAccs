@@ -1,0 +1,546 @@
+@import "vars"
+// loads Libs SASS
+@import "animate"
+@import "../libs/magnific-popup.css"
+@import "../libs/tooltipster-follower.min.css"
+@import "../libs/tooltipster.bundle.min.css"
+@import "../libs/tooltipster.main.min.css"
+@import "../libs/font-awesome.min.css"
+
+@import "../libs/slidebars.min.css"
+@import "../libs/select2.min.css"
+@import "../libs/owl.carousel.min.css"
+@import "../libs/owl.theme.default.min.css"
+
+html
+	&.modal
+		margin-right: 12px !important
+html, body
+	font-size: 16px
+	&.flex-footer
+		height: 100%
+	&.slidebars
+		width: 100%
+		overflow: hidden !important
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body
+	margin: 0
+	min-width: 1300px
+	position: relative
+	line-height: 1.6
+	font-family: $font_main_regular
+	overflow-x: auto
+	color: $main_txt_color
+	-webkit-tap-highlight-color: transparent
+	//внешний вид скроллбара
+	scrollbar-base-color: $main_color   //для IE
+	scrollbar-arrow-color: $main_color	//для IE
+	//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
+	&::-webkit-scrollbar
+		width: 12px
+	&::-webkit-scrollbar-thumb
+		background-color: $main_color
+		&:hover
+			background-color: darken($main_color, 10%)
+	&::-webkit-scrollbar-track-piece
+		background-color: transparent
+//-webkit-font-smoothing: antialiased
+//-moz-osx-font-smoothing: grayscale
+
+input, textarea
+	outline: none
+h1
+	@include font($main_color, 28, $font_main_regular, 1.2)
+h4
+	margin: 0
+	padding: 0
+	font-weight: lighter
+p,ul,label
+	padding: 0
+	margin: 0
+li
+	list-style: none
+a
+	color: $main_black
+	transition: $trans
+	&:hover
+		/* style */
+		text-decoration: none
+		color: darken($main_black,25%)
+	&:focus
+		text-decoration: none
+.select
+	position: relative
+	text-align: left
+	.drop
+		width: 100%
+		max-height: 200px
+		overflow: auto
+		margin: 0 auto
+		padding: 0
+		border-top: none
+		display: none
+		position: absolute
+		background-color: #F4F4F4
+		top: 39px
+		left: 0
+		right: 0
+		z-index: 10
+		li
+			list-style: none
+			border-bottom: none
+			border-top: none
+			cursor: pointer
+			display: block
+			padding: 7px 15px 7px 25px
+			&:hover
+				background-color: rgba(0,0,0,0.2)
+				outline: 0
+			a
+				text-decoration: none
+	.slct
+		width: 100%
+		height: 40px
+		padding-right: 30px
+		margin-bottom: 30px
+		display: block
+		@include font(gray, 16, $font_main_regular, 1.2)
+		background-color: #F4F4F4
+		line-height: 40px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		-o-text-overflow: ellipsis
+		text-decoration: none
+		position: relative
+		transition: color 1s
+		&.active
+			color: #000
+			background-color: #F4F4F4
+	.slct_arrow
+		position: absolute
+		top: 3px
+		right: 10px
+		.fa
+			@include fz(24)
+			color: #000
+			position: relative
+			z-index: 10
+			transition: 0.3s
+		&.active .fa
+			transform: rotate(180deg)
+.container
+	width: 1200px
+.field-accountsnotavailableindex-recaptcha
+	width: 300px
+	height: 75px
+	background: $main_black
+.noselect
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+.hidden
+	display: none
+//модальные окна
+.modal_index,.modal_payments,.modal_buyakkaynt,.modal_buyakkaynt2
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	background: rgba(0,0,0,0.6)
+	z-index: 9
+	display: none
+	justify-content: center
+	align-items: center
+	transition: $trans
+	transform: translateY(-100%)
+	opacity: 0
+	&.modal_open
+		display: flex
+		opacity: 1
+		transform: translateY(0)
+	.modal_window
+		position: relative
+		padding: 30px
+		background: $background_gray
+		font-size: 25px
+		width: 570px
+		box-sizing: border-box
+		z-index: 8
+		border-radius: 3px
+		.modal_buyakkaynt__title
+			font-size: 25px
+			color: $main_color
+			padding: 0
+			margin-bottom: 10px
+		.modal_buyakkaynt__txt
+			padding-bottom: 10px
+			font-size: 18px
+			line-height: 1.2
+		.your_curr_count
+			font-size: 22px
+			span
+				display: block
+				color: $main_color_red
+		.form_modal
+			padding-top: 15px
+			.modal_buyakkaynt__alert
+				margin-bottom: 20px
+				font-size: 18px
+				line-height: 1.2
+				color: $main_color
+				b
+					font-weight: bolder
+			.modal_buyakkaynt__input-wrap
+				min-height: 36px
+				display: flex
+				align-items: center
+				margin-bottom: 14px
+				&>a
+					width: 165px
+					font-size: 16px
+					color: $main_txt_color
+					flex-shrink: 0
+					&:hover
+						color: $main_color
+						text-decoration: underline
+					&:active
+						text-decoration: underline
+					&:focus
+						outline: 0
+						text-decoration: underline
+
+				&.last
+					margin-bottom: 20px
+				span.inner-txt
+					font-size: 16px
+				label
+					width: 165px
+					line-height: 1.2
+					font-size: 16px
+					flex-shrink: 0
+				input
+					width: 100%
+					font-size: 16px
+					padding-left: 20px
+					height: 36px
+					background-color: white
+					border: 0.5px solid #3a3c4b
+					border-radius: 5px
+				input[type=e-mail]
+					width: 100%
+				input.quantity
+					width: 170px
+				input.code
+					display: none
+				span.bold-text
+					color: $main_color
+					font-weight: bolder
+					font-size: 18px
+				.select
+					width: 100%
+					padding: 0
+					.slct_arrow
+						top: 0
+					.slct
+						width: 100%
+						margin: 0
+						padding-left: 20px
+						border-radius: 5px
+					.drop
+						top: inherit
+						border-radius: 5px
+						li
+							font-size: 16px
+							padding: 7px 15px 7px 20px
+			.last-big-margin
+				margin-bottom: 25px
+			.modal_buyakkaynt__btn-wrap
+				text-align: center
+				&.no-center
+					display: flex
+					align-items: center
+					text-align: left
+				span
+					font-weight: bold
+					font-size: 18px
+			.buy_btn
+				width: 230px
+				height: 50px
+				border-radius: 25px
+				display: inline-block
+				&.pay
+					width: 160px
+					margin-left: auto
+				&.transparent
+					margin-right: 10px
+					background: transparent
+					border: 1px solid #9f133b
+					color: $main_color
+					&:hover
+						background: lighten($main_color_red,15%)
+						color: darken($main-bg-color,15%)
+			.divider
+				width: 100%
+				height: 1px
+				margin-bottom: 20px
+				border: 0.5px solid #a8a8aa
+			.payments_modal_input
+				width: 240px
+				height: 40px
+				font-size: 16px
+				padding: 0 10px
+				&::placeholder
+					color: darken($main_color_gray,25%)
+			.select
+				padding-top: 30px
+				.slct_arrow
+					top: 29px
+					.fa-angle-down
+						color: $main_color_red
+				.slct
+					padding-left: 10px
+					font-size: 16px
+					border: 1px solid darken($main_color_gray,25%)
+					background: #FFF
+					color: darken($main_color_gray,25%)
+				.drop
+					top: 70px
+					border: 1px solid $main_color_red
+					background: #fff
+					color: $main_txt_color
+					li
+						font-size: 18px
+						&:hover
+							/* style */
+							background: $main_color_red
+							color: #fff
+		.fa-times-circle-o
+			position: absolute
+			top: -28px
+			right: -28px
+			color: #fff
+			font-size: 2rem
+			cursor: pointer
+			text-align: center
+			transition: $trans
+			&:hover
+				/* style */
+				color: $main_color_red
+		p
+			padding-bottom:	30px
+		.good_absent
+			color: $main_color_red
+			padding-bottom:	30px
+		.e_mail_p
+			p
+				padding-bottom: 20px
+			span
+				font-size: 16px
+		.form_modal
+			input
+				font-size: 18px
+			input[type=e-mail]
+				width: 100%
+				height: 35px
+				padding-left: 15px
+			.wrap_input_button
+				display: flex
+				justify-content: space-between
+				align-items: center
+				padding-top: 20px
+				input[type=text]
+					width: 50%
+					height: 35px
+					padding-left: 15px
+				input[type=submit]
+					font-size: 16px
+	.overlay
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 7
+//стили для title
+.title_wrap_h2
+	text-align: center
+	font-size: 30px
+	padding-bottom: 50px
+	h2
+		font-weight: lighter
+		font-size: 35px
+		span
+			color: $main_color_red
+// стили для хедера
+.header
+	background: url(../img/header-background.png) top center no-repeat
+	background-size: cover
+	height: 150px
+	padding: 20px 0
+	z-index: 10
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+// стили для лого
+.header_wrap
+	width: 100%
+	display: flex
+	justify-content: space-between
+	.logo
+		display: flex
+		width: 270px
+		align-items: center
+		justify-content: center
+// стили для меню
+.menu_contacts_wrap
+	width: 70%
+	.menu
+		width: 100%
+		margin-bottom: 30px
+		.menu_list
+			display: flex
+			justify-content: space-between
+			li
+				a
+					font-size: 18px
+					transition: $trans
+					position: relative
+					&:hover
+						color: $main_color_red
+					&::after
+						content: ""
+						/* style */
+						position: absolute
+						bottom: -2px
+						left: 0
+						right: 0
+						width: 0
+						height: 1px
+						background: $main_color_red
+						transition: $trans
+						margin: 0 auto
+					&:hover::after
+						width: 100%
+			.services
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				a
+					padding-right: 10px
+					&::after
+						display: none
+				.fa
+					font-size: 2rem
+					color: $main_color_red
+			.langruage
+				padding: 3px 18px
+				border-radius: 5px
+				background: $main_color_red
+				transition: $trans
+				cursor: pointer
+				&:hover
+					/* style */
+					background: lighten($main_color_red,15%)
+
+	.contacts
+		background: transparent
+		.contacts_list
+			display: flex
+			justify-content: space-around
+			li
+				img
+					margin-right: 20px
+				span
+					font-size: 18px
+					color: #777982
+.menu_list
+	margin-bottom: 20px
+.map_index
+	background: url(../img/map-main.jpg)
+	width: 100%
+	height: 422px
+	z-index: 1
+	position: absolute
+	top: 30px
+	display: flex
+	h1
+		color: #000
+		margin: auto
+		font-weight: lighter
+		span
+			color: $main_color_red
+.footer
+	background: $main_black
+	height: 150px
+	box-sizing: border-box
+	padding: 30px 0
+	.container
+		display: flex
+		justify-content: space-between
+		.logo_footer
+			display: flex
+			align-items: center
+			justify-content: center
+		.footer_links
+			.links_list
+				column-count: 2
+				li
+					a
+						color: #fff
+						font-size: 14px
+						transition: $trans
+						position: relative
+						&::after
+							content: ""
+							/* style */
+							position: absolute
+							bottom: -2px
+							left: 0
+							right: 0
+							width: 0
+							height: 1px
+							background: #fff
+							transition: $trans
+							margin: 0 auto
+						&:hover::after
+							width: 100%
+		.footer_contacts
+			.contacts_list
+				span
+					padding-left: 15px
+					color: #fff
+					font-size: 14px
+		.footer_creator
+			h5
+				color: #fff
+				font-weight: lighter
