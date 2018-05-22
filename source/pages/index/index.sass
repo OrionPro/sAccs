@@ -297,15 +297,33 @@ h2
 .main_table_tooltip_input
 	width: 119px
 	height: 32px
+	padding: 0!important
 	background-color: #e8e8e8
 	border-radius: 5px
 	position: absolute
+	visibility: hidden
+	opacity: 0
 	top: -45px
 	left: 30px
+	transition: 0.5s
 	&:after
 		@include css-triangle(#e8e8e8,angle)
 		top: calc(50% - -20px)
 		left: 10px
 		transition: 0.5s
+	&.active
+		visibility: visible
+		opacity: 1
+	dl
+		line-height: 32px
+		display: flex
+		justify-content: center
+		font-size: 14px
+		color: #000
+		margin: 0
+		dt
+			margin-right: 5px
+		dd
+			margin: 0
 // media
 @import '../../sass/_media.sass'
