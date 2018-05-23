@@ -245,21 +245,53 @@ h2
 		align-items: flex-start
 		padding-bottom: 40px
 		.form_container
-			width: 64.16%
+			width: 770px
 			padding:
 				top: 25px
 				left: 30px
 				bottom: 30px
-				right: 65px
+				right: 30px
 			background: $background_gray
 			box-shadow: 3px 7px 5px 0px rgba(50, 50, 50, 0.5)
+			form
+				.form-group-wrap
+					display: flex
+					flex-wrap: wrap
+					.form-group
+						margin-bottom: 25px
+						&:nth-of-type(odd)
+							/* style */
+							margin-right: 30px
+				.select
+					.slct_arrow
+						top: 3px
+						.fa
+							color: $main_color_red
+					.slct
+						margin: 0
+						width: 340px
+						height: 28px
+						line-height: 28px
+						background-color: #ffffff
+						border: 1px solid gray
+						padding-left: 5px
+						font-size: 15px
+						border-radius: 5px
+					.drop
+						top: 29px
+						background-color: #ffffff
+						li
+							padding: 3px 25px 3px 5px
+							color: black
+							font-size: 14px
 			p
 				font-weight: bold
 				padding-bottom: 30px
 			label
 				display: block
+				margin-bottom: 10px
 			input[type=text]
-				width: 70%
+				width: 340px
 				height: 25px
 				padding-left: 10px
 				border-radius: 5px

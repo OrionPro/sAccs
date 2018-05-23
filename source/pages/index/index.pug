@@ -325,28 +325,35 @@ block main
 					p Если в магазине нет нужного Вам количества аккаунтов или мы еще не добавили вид аккаунтов который Вам нужен, заполните данную форму и мы с Вами свяжемся:
 					form
 						input(type='hidden')
-						.alert-danger.name-feedbacks
-							.feedbacks-name
-						.form_akk_name
-							.form-group.field-akk_name.required.has-error
-								label.control-label Вид аккаунтов
-								input(type='text').input.input_big
-								.help-block
-						.alert-danger.email-feedbacks
-							.feedbacks-email
-						.form_quantyti
+						.form-group-wrap
+							.form-group
+								label.control-label Аккаунты
+								.select
+									.slct_arrow
+										i.fa.fa-angle-down
+									a(href="#" class="slct") Выбрать из текущего каталога
+									ul.drop
+										li Все загруженные4
+										li Все загруженные5
+										li Все загруженные6
+							.form-group
+								label.control-label Выбрать аакаунты из каталога
+								.select
+									.slct_arrow
+										i.fa.fa-angle-down
+									a(href="#" class="slct") Тип аккаунта
+									ul.drop
+										li аккаунт1
+										li аккаунт2
+										li аккаунт3
 							.form-group.field-quantyti.required.has-error
 								label.control-label Количество
 								input(type='text').input.input_big
 								.help-block
-						.alert-danger.feedback-feedbacks
-							.feedbacks-feedback
-						.form_user_email
 							.form-group.field-user_email.required.has-error
 								label.control-label Эллектронный адрес
 								input(type='text').input.input_big
 								.help-block
-						.form_user_email
 							.form-group.field-accountsnotavailableindex-form_name.has-success
 								label.control-label
 								input(type='hidden').input.input_big
