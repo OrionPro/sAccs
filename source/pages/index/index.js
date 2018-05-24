@@ -146,6 +146,8 @@ $(document).ready(function () {
 		btn: '.tba_item_button',
 		class: 'rotate_i'
 	});
+	// Инициализация datepicker
+	$( "#datepicker" ).datepicker();
 	// в input в талице делаем подсказку
 	$('.ti_body .ti_body_title .ti_body_row .ti_body_form form input').focus( function () {
 		$(this).parent().find('.main_table_tooltip_input').addClass('active');

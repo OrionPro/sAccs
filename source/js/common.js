@@ -177,7 +177,17 @@ $(document).ready(function () {
 	//     owl.trigger('prev.owl.carousel', [700]);
 	// });
 
-
+	// $(document).on('pjax:success', function () {
+	//     $('.tba_item').click(function () {
+	//         $(this).children('.tba_item_body').toggle('slow');
+	//
+	//         $('.fa-angle-down').each(function () {
+	//             $('.fa-angle-down').removeClass('rotate_i');
+	//         });
+	//         var x = $(this).find('i').addClass('rotate_i');
+	//         console.log(x);
+	//     });
+	// });
 });
 
 $(window).resize(function () {
