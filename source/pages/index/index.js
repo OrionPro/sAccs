@@ -85,7 +85,7 @@ export class NewModalBehavior extends ModalBehavior {
 	addListeners() {
 		super.addListeners();
 		[...this.btnOpen].forEach(item => {
-			item.addEventListener('click', ({target} = ev) => {
+			item.addEventListener('click', ({target} = e) => {
 				let num = [...this.btnOpen].indexOf(target);
 				let {value} = this.inputValue[num], {textContent} = this.values[num];
 				if (+textContent < +value && +value > 0) {
@@ -101,16 +101,16 @@ export class NewModalBehavior extends ModalBehavior {
 
 	static validation(el) {
 		const elem = typeof el === 'string' ? document.querySelectorAll(el) : el;
-		[...elem].forEach(item => item.addEventListener('input', ({target} = ev) => (
+		[...elem].forEach(item => item.addEventListener('input', ({target} = e) => (
 			/\D/g.test(target.value) ? target.value = '' : null
 		)))
 	}
 
 	inputListeners() {
-		[...this.inputValue].forEach(item => item.addEventListener('input', ({target} = ev) => {
+		[...this.inputValue].forEach(item => item.addEventListener('input', ({target} = e) => {
 			/\D/g.test(target.value) ? target.value = '' : null;
 		}));
-		this.newVal.addEventListener('input', ({target} = ev) => {
+		this.newVal.addEventListener('input', ({target} = e) => {
 			/\D/g.test(target.value) ? target.value = '' : null;
 		})
 		// this.validation(this.inputValue);
@@ -134,13 +134,14 @@ export class NewModalBehavior extends ModalBehavior {
 
 
 $(document).ready(function () {
-
-	new NewModalBehavior({
-		btnOpen: '.buy_btn',
-		btnClose: '.fa-times-circle-o',
-		target: '.modal_index',
-		className: 'modal_open'
-	}, '.ti_body_row', '.good_absent', '.wrap_input_button > input[type="text"]');
+	if($('.wrap_input_button > input[type="text"]').length) {
+		new NewModalBehavior({
+			btnOpen: '.buy_btn',
+			btnClose: '.fa-times-circle-o',
+			target: '.modal_index',
+			className: 'modal_open'
+		}, '.ti_body_row', '.good_absent', '.wrap_input_button > input[type="text"]');
+	}
 
 	showLinksContent({
 		btn: '.tba_item_button',

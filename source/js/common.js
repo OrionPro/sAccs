@@ -71,18 +71,23 @@ export class inputOnlyNumbers {
 
 $(document).ready(function () {
 	// объявление модалок
-	new ModalBehavior({
-		btnOpen: '.buyakkaynt',
-		btnClose: '.close-modal-buyakkaynt',
-		target: '.modal_buyakkaynt',
-		className: 'modal_open'
-	});
-	new ModalBehavior({
-		btnOpen: '.buyakkaynt2',
-		btnClose: '.close-modal-buyakkaynt2',
-		target: '.modal_buyakkaynt2',
-		className: 'modal_open'
-	});
+	if($('.buyakkaynt').length) {
+		new ModalBehavior({
+			btnOpen: '.buyakkaynt',
+			btnClose: '.close-modal-buyakkaynt',
+			target: '.modal_buyakkaynt',
+			className: 'modal_open'
+		});
+	}
+	if($('.buyakkaynt2').length){
+		new ModalBehavior({
+			btnOpen: '.buyakkaynt2',
+			btnClose: '.close-modal-buyakkaynt2',
+			target: '.modal_buyakkaynt2',
+			className: 'modal_open'
+		});
+	}
+
 	// есть промокод в модалках
 	$('.modal-promo').on('click', function (e) {
 		e.preventDefault();
