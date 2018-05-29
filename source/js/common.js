@@ -71,18 +71,23 @@ export class inputOnlyNumbers {
 
 $(document).ready(function () {
 	// объявление модалок
-	new ModalBehavior({
-		btnOpen: '.buyakkaynt',
-		btnClose: '.close-modal-buyakkaynt',
-		target: '.modal_buyakkaynt',
-		className: 'modal_open'
-	});
-	new ModalBehavior({
-		btnOpen: '.buyakkaynt2',
-		btnClose: '.close-modal-buyakkaynt2',
-		target: '.modal_buyakkaynt2',
-		className: 'modal_open'
-	});
+	if($('.buyakkaynt').length) {
+		new ModalBehavior({
+			btnOpen: '.buyakkaynt',
+			btnClose: '.close-modal-buyakkaynt',
+			target: '.modal_buyakkaynt',
+			className: 'modal_open'
+		});
+	}
+	if($('.buyakkaynt2').length){
+		new ModalBehavior({
+			btnOpen: '.buyakkaynt2',
+			btnClose: '.close-modal-buyakkaynt2',
+			target: '.modal_buyakkaynt2',
+			className: 'modal_open'
+		});
+	}
+
 	// есть промокод в модалках
 	$('.modal-promo').on('click', function (e) {
 		e.preventDefault();
@@ -177,7 +182,17 @@ $(document).ready(function () {
 	//     owl.trigger('prev.owl.carousel', [700]);
 	// });
 
-
+	// $(document).on('pjax:success', function () {
+	//     $('.tba_item').click(function () {
+	//         $(this).children('.tba_item_body').toggle('slow');
+	//
+	//         $('.fa-angle-down').each(function () {
+	//             $('.fa-angle-down').removeClass('rotate_i');
+	//         });
+	//         var x = $(this).find('i').addClass('rotate_i');
+	//         console.log(x);
+	//     });
+	// });
 });
 
 $(window).resize(function () {
