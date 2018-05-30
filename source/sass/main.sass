@@ -500,7 +500,37 @@ a
 		font-weight: lighter
 		span
 			color: $main_color_red
-
+.other_main .form_valid_wrap
+	.form_container
+		.form-group
+			position: relative
+		.form-error-title
+			background-color: #9f133b
+			border-radius: 5px
+			padding: 10px
+			line-height: 1.2
+			position: absolute
+			right: 0
+			top: -40px
+			visibility: hidden
+			opacity: 0
+			font-size: 14px
+			color: #fff
+			transition: 0.5s
+			&:after
+				position: absolute
+				bottom: -12px
+				left: calc(50% - 12px)
+				@include css-triangle(#9f133b,down, 12px)
+				/* style */
+		.has-error
+			input[type=text]
+				border: 1px solid #a21c44
+				box-shadow: 0 1px 6px rgba(162,28,68, 1)
+				background-color: #ede1e2
+			.form-error-title
+				visibility: visible
+				opacity: 1
 .footer
 	background: $main_black
 	height: 150px

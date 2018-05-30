@@ -347,6 +347,10 @@ block main
 										li аккаунт2
 										li аккаунт3
 							.form-group.field-quantyti.required.has-error
+								.form-error-title
+									| Необходимо заполнить
+									br
+									| «Вид аккаунтов»
 								label.control-label Количество
 								input(type='text').input.input_big
 								.help-block
@@ -354,11 +358,11 @@ block main
 								label.control-label На когда нужно
 								input(type='text' id="datepicker").input.input_big
 								.help-block
-							.form-group.field-user_email.required.has-error
+							.form-group.field-user_email.required
 								label.control-label Электронный адрес
 								input(type='text').input.input_big
 								.help-block
-							.form-group.field-user_email.required.has-error
+							.form-group.field-user_email.required
 								label.control-label Желаемая стоимость
 								input(type='text').input.input_big
 								.help-block
