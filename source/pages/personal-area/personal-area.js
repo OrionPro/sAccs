@@ -93,18 +93,20 @@ $(document).ready(function () {
 		animation: 'grow',
 		theme: 'tooltipster-shadow'
 	});
-
-	emptyValidate({
-		btn:'.wal_check',
-		input:'.add_new_wal'
-	});
-
-	buttonPlus({
-		btn: '.btn_plus',
-		input: '.form_user_add_new_el_wallet',
-		class: 'show_new_wallet',
-		attr: '.select > .slct'
-	});
+	if($('.wal_check').length) {
+		emptyValidate({
+			btn: '.wal_check',
+			input: '.add_new_wal'
+		});
+	}
+	if($('.btn_plus').length) {
+		buttonPlus({
+			btn: '.btn_plus',
+			input: '.form_user_add_new_el_wallet',
+			class: 'show_new_wallet',
+			attr: '.select > .slct'
+		});
+	}
 
 	turnOnInput({
 		input: '.switch',
