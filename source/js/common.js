@@ -87,6 +87,14 @@ $(document).ready(function () {
 			className: 'modal_open'
 		});
 	}
+	if($('.modal-lk-success').length){
+		new ModalBehavior({
+			btnOpen: '.lk-success',
+			btnClose: '.close-modal-lk-success',
+			target: '.modal-lk-success',
+			className: 'modal_open'
+		});
+	}
 
 	// есть промокод в модалках
 	$('.modal-promo').on('click', function (e) {
