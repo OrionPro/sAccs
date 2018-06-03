@@ -176,25 +176,45 @@ a
 	top: 0
 	left: 0
 	background: rgba(0,0,0,0.6)
-	z-index: 9
+	z-index: 90
 	display: none
-	justify-content: center
-	align-items: center
+	overflow-x: hidden
+	overflow-y: auto
 	transition: $trans
-	transform: translateY(-100%)
+	//transform: translateY(-100%)
+	outline: none !important
 	opacity: 0
 	&.modal_open
-		display: flex
+		display: block
 		opacity: 1
-		transform: translateY(0)
+	.modal_window-container
+		text-align: center
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		padding: 0 8px
+		box-sizing: border-box
+		&:before
+			content: ''
+			display: inline-block
+			height: 100%
+			vertical-align: middle
+	.modal_window-content
+		display: inline-block
+		vertical-align: middle
+		margin: 0 auto
+		position: relative
 	.modal_window
+		width: 570px
+		margin: auto
 		position: relative
 		padding: 30px
 		background: $background_gray
 		font-size: 25px
-		width: 570px
 		box-sizing: border-box
-		z-index: 8
+		z-index: 80
 		border-radius: 3px
 		.modal_buyakkaynt__title
 			font-size: 25px

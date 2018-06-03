@@ -35,9 +35,9 @@ html(class="no-js" lang="ru")
 	// Весь внутренний контент страницы
 	// второй класс у body это анимация на модалке (animated-transition-effects гуглануть или спросить меня, убрав класс вернётся обычная анимация модалки, без изысков)
 	body
-		block header
-			header(class="header")
-				.modal_index
+		.modal_index
+			.modal_window-container
+				.modal_window-content
 					.modal_window
 						i(class="fa fa-times-circle-o")
 						p К сожалению, на данный момент у нас нет нужного количества аккаунтов:
@@ -51,8 +51,10 @@ html(class="no-js" lang="ru")
 								.wrap_input_button
 									input(type='text' name='name')
 									input(type='submit' class='btn-form')
-					.overlay
-				.modal_buyakkaynt
+			.overlay
+		.modal_buyakkaynt
+			.modal_window-container
+				.modal_window-content
 					.modal_window
 						i(class="fa fa-times-circle-o close-modal-buyakkaynt")
 						p.modal_buyakkaynt__title Оплата:
@@ -86,8 +88,10 @@ html(class="no-js" lang="ru")
 									span.bold-text 87 руб.
 								.modal_buyakkaynt__btn-wrap
 									button(type="submit" class="buy_btn") ПЕРЕЙТИ К ОПЛАТЕ
-					.overlay
-				.modal_buyakkaynt2
+			.overlay
+		.modal_buyakkaynt2
+			.modal_window-container
+				.modal_window-content
 					.modal_window
 						i(class="fa fa-times-circle-o close-modal-buyakkaynt2")
 						p.modal_buyakkaynt__title Оплата:
@@ -124,31 +128,36 @@ html(class="no-js" lang="ru")
 									button(type="button" class="buy_btn transparent") ПРОВЕРИТЬ ОПЛАТУ
 									span 00:25
 									button(type="submit" class="buy_btn pay") ОПЛАТИТЬ
-					.overlay
-				.modal-lk-success
+			.overlay
+		.modal-lk-success
+			.modal_window-container
+				.modal_window-content
 					.modal_window
 						i(class="fa fa-times-circle-o close-modal-lk-success")
 						img(src=require("../../img/modal-lk-success.png"))
-				.modal_payments
-					.modal_window
-						i(class="fa fa-times-circle-o")
-						p ВЫВОД СРЕДСТВ:
-						.your_curr_count
-							| Ваш счет:
-							span.curr_payment
-						.form_modal
-							form.extended_submit
-								input(type='text' name='text' class='payments_modal_input' title='Сумма вывода не может превышать сумму на Вашем счету' placeholder='Введите сумму')
-								.select
-									.slct_arrow
-										i.fa.fa-angle-down
-									a(href="#" class="slct") WebMoney
-									ul.drop
-										li WebMoney
-										li Yandex-деньги
-										li Scrill
-								input(type='submit' class='btn-form extended_submit')
-					.overlay
+			.overlay
+		.modal_payments
+			.modal_window
+				i(class="fa fa-times-circle-o")
+				p ВЫВОД СРЕДСТВ:
+				.your_curr_count
+					| Ваш счет:
+					span.curr_payment
+				.form_modal
+					form.extended_submit
+						input(type='text' name='text' class='payments_modal_input' title='Сумма вывода не может превышать сумму на Вашем счету' placeholder='Введите сумму')
+						.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct") WebMoney
+							ul.drop
+								li WebMoney
+								li Yandex-деньги
+								li Scrill
+						input(type='submit' class='btn-form extended_submit')
+			.overlay
+		block header
+			header(class="header")
 				.container
 					.header_wrap
 						.logo

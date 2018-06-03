@@ -15,7 +15,7 @@ export default class ModalBehavior {
 		this.btnOpen = document.querySelectorAll(obj.btnOpen);
 		this.btnClose = document.querySelector(obj.btnClose);
 		this.targets = document.querySelector(obj.target);
-		this.typeOfDisplay = obj.typeOfDisplay || 'flex';
+		this.typeOfDisplay = obj.typeOfDisplay || 'block';
 		this.className = obj.className;
 		this.overlay = this.findOverlay();
 		this.addListeners = this.addListeners.bind(this);
