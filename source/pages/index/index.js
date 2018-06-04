@@ -142,11 +142,13 @@ $(document).ready(function () {
 			className: 'modal_open'
 		}, '.ti_body_row', '.good_absent', '.wrap_input_button > input[type="text"]');
 	}
-
+	//скрипт показывает категории аккаунтов
 	showLinksContent({
 		btn: '.tba_item_button',
 		class: 'rotate_i'
 	});
+	// открываем первую категорию боковой менюшки
+	$('.tba_item_button').first().trigger('click');
 	// Инициализация datepicker
 	$( "#datepicker" ).datepicker();
 	// в input в талице делаем подсказку
