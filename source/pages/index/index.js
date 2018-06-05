@@ -153,10 +153,10 @@ $(document).ready(function () {
 	$( "#datepicker" ).datepicker();
 	// в input в талице делаем подсказку
 	$('.ti_body .ti_body_title .ti_body_row .ti_body_form form input').focus( function () {
-		$(this).parent().find('.main_table_tooltip_input').addClass('active');
+		$(this).parents('.ti_body_form').find('.main_table_tooltip_input').addClass('active');
 	});
 	$('.ti_body .ti_body_title .ti_body_row .ti_body_form form input').blur( function () {
-		$(this).parent().find('.main_table_tooltip_input').removeClass('active');
+		$(this).parents('.ti_body_form').find('.main_table_tooltip_input').removeClass('active');
 	});
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	$('.our_advantages h2').animated("fadeInUp");
