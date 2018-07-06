@@ -58,6 +58,7 @@ class PaymentsModal extends ModalBehavior{
 
 $(document).ready(function(){
 
+	// Инициализация модалки
 	new PaymentsModal({
 		btnOpen:'.order_payment > .main_btn',
 		btnClose:'.modal_payments >.modal_window > .fa-times-circle-o',
