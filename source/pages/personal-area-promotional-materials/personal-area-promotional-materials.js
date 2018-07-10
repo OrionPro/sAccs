@@ -16,9 +16,9 @@ $(document).ready(function(){
 	$('.profile_body_balance .show-code').on('click', function (e) {
 		e.preventDefault();
 		if($(this).hasClass('hide-code')){
-			$(this).siblings('.affiliate-links').hide('fade').end().add(this).text('Показать код').removeClass('hide-code');
+			$(this).parent().siblings('.affiliate-links').hide('fade').end().add(this).children().text('Показать код').removeClass('hide-code');
 		} else {
-			$(this).siblings('.affiliate-links').show('fade').end().add(this).text('Скрыть код').addClass('hide-code');
+			$(this).parent().siblings('.affiliate-links').show('fade').end().add(this).children().text('Скрыть код').addClass('hide-code');
 		}
 	});
 
