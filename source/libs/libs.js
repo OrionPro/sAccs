@@ -27,6 +27,7 @@ exports.select2 = function () {
 exports.input_mask = function () {
 	return require("jquery-inputmask");
 };
+
 // Экспорты из папки libs
 
 exports.jqueryui = function () {
@@ -57,9 +58,6 @@ exports.animate_modal_js = function () {
 	return require("../libs/anim-modal");
 };
 
-exports.sticky = function () {
-	return require("../libs/jquery.sticky");
-};
 
 exports.owl_carousel = function () {
 	return require("../libs/owl.carousel.min");

@@ -11,7 +11,7 @@ require("../libs/libs").tooltipster();
 require("../libs/libs").jqueryValidation();
 require("../libs/libs").select2();
 require("../libs/libs").input_mask();
-require("../libs/libs").sticky();
+import Sticky from 'sticky-js'
 import validation from '../js/validation';
 import modal from '../js/modal';
 
@@ -70,6 +70,9 @@ export class inputOnlyNumbers {
 }
 
 $(document).ready(function () {
+	// не забываем, что нужно делать прилипающим сам элемент, а не его обёртку, как тут есть обёртка .tabs_body , но мы создали .tabs_body_inner ,чтобы работал вообще sticky
+	// инициализация sticky
+	var sticky = new Sticky('.sticky');
 	// объявление модалок
 	if($('.buyakkaynt').length) {
 		new ModalBehavior({
