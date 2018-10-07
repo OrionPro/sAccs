@@ -42,12 +42,18 @@ function tabs(obj) {
  export function showLinksContent(obj){
 	"use strict";
 	const btn = document.querySelectorAll(obj.btn);
+	 // не забываем, что нужно делать прилипающим сам элемент, а не его обёртку, как тут есть обёртка .tabs_body , но мы создали .tabs_body_inner ,чтобы работал вообще sticky
+// инициализация sticky
+	var sticky = new Sticky('.sticky');
 
 	let showBody = function () {
 		let i = [...this.children].find(item => item.tagName === 'I');
 		i.classList.toggle(obj.class);
 		let {nextElementSibling:body} = this;
-		$(body).slideToggle('slow');
+		sticky.destroy(); // разушаем его ибо потом надо будет создать новый с новой высотой
+		$(body).slideToggle('slow', function () {
+			sticky = new Sticky('.sticky');// после анимации создаём новый, на основе новой высоты
+		});
 	};
 	[...btn].forEach(item =>item.addEventListener('click',showBody));
 
@@ -70,9 +76,7 @@ export class inputOnlyNumbers {
 }
 
 $(document).ready(function () {
-	// не забываем, что нужно делать прилипающим сам элемент, а не его обёртку, как тут есть обёртка .tabs_body , но мы создали .tabs_body_inner ,чтобы работал вообще sticky
-	// инициализация sticky
-	var sticky = new Sticky('.sticky');
+
 	// объявление модалок
 	if($('.buyakkaynt').length) {
 		new ModalBehavior({
